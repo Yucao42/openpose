@@ -9,7 +9,7 @@ layer {
   type: "Convolution"
   bottom: "image"
   top: "conv1_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 64
     pad: 1
     kernel_size: 3
@@ -26,7 +26,7 @@ layer {
   type: "Convolution"
   bottom: "conv1_1"
   top: "conv1_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 64
     pad: 1
     kernel_size: 3
@@ -54,7 +54,7 @@ layer {
   type: "Convolution"
   bottom: "pool1_stage1"
   top: "conv2_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -71,7 +71,7 @@ layer {
   type: "Convolution"
   bottom: "conv2_1"
   top: "conv2_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -99,7 +99,7 @@ layer {
   type: "Convolution"
   bottom: "pool2_stage1"
   top: "conv3_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 256
     pad: 1
     kernel_size: 3
@@ -116,7 +116,7 @@ layer {
   type: "Convolution"
   bottom: "conv3_1"
   top: "conv3_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 256
     pad: 1
     kernel_size: 3
@@ -133,7 +133,7 @@ layer {
   type: "Convolution"
   bottom: "conv3_2"
   top: "conv3_3"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 256
     pad: 1
     kernel_size: 3
@@ -150,7 +150,7 @@ layer {
   type: "Convolution"
   bottom: "conv3_3"
   top: "conv3_4"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 256
     pad: 1
     kernel_size: 3
@@ -178,7 +178,7 @@ layer {
   type: "Convolution"
   bottom: "pool3_stage1"
   top: "conv4_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 512
     pad: 1
     kernel_size: 3
@@ -195,7 +195,7 @@ layer {
   type: "Convolution"
   bottom: "conv4_1"
   top: "conv4_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 512
     pad: 1
     kernel_size: 3
@@ -212,7 +212,7 @@ layer {
   type: "Convolution"
   bottom: "conv4_2"
   top: "conv4_3_CPM"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 256
     pad: 1
     kernel_size: 3
@@ -229,7 +229,7 @@ layer {
   type: "Convolution"
   bottom: "conv4_3_CPM"
   top: "conv4_4_CPM"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -246,7 +246,7 @@ layer {
   type: "Convolution"
   bottom: "conv4_4_CPM"
   top: "Mconv1_stage0_L2_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -263,7 +263,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv1_stage0_L2_0"
   top: "Mconv1_stage0_L2_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -280,7 +280,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv1_stage0_L2_1"
   top: "Mconv1_stage0_L2_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -308,7 +308,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv1_stage0_L2_concat"
   top: "Mconv2_stage0_L2_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -325,7 +325,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv2_stage0_L2_0"
   top: "Mconv2_stage0_L2_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -342,7 +342,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv2_stage0_L2_1"
   top: "Mconv2_stage0_L2_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -370,7 +370,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv2_stage0_L2_concat"
   top: "Mconv3_stage0_L2_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -387,7 +387,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv3_stage0_L2_0"
   top: "Mconv3_stage0_L2_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -404,7 +404,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv3_stage0_L2_1"
   top: "Mconv3_stage0_L2_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -432,7 +432,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv3_stage0_L2_concat"
   top: "Mconv4_stage0_L2_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -449,7 +449,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv4_stage0_L2_0"
   top: "Mconv4_stage0_L2_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -466,7 +466,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv4_stage0_L2_1"
   top: "Mconv4_stage0_L2_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -494,7 +494,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv4_stage0_L2_concat"
   top: "Mconv5_stage0_L2_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -511,7 +511,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv5_stage0_L2_0"
   top: "Mconv5_stage0_L2_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -528,7 +528,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv5_stage0_L2_1"
   top: "Mconv5_stage0_L2_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -556,7 +556,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv5_stage0_L2_concat"
   top: "Mconv6_stage0_L2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 256
     pad: 0
     kernel_size: 1
@@ -573,7 +573,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv6_stage0_L2"
   top: "Mconv7_stage0_L2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 52
     pad: 0
     kernel_size: 1
@@ -594,7 +594,7 @@ layer {
   type: "Convolution"
   bottom: "concat_stage1_L2"
   top: "Mconv1_stage1_L2_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -611,7 +611,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv1_stage1_L2_0"
   top: "Mconv1_stage1_L2_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -628,7 +628,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv1_stage1_L2_1"
   top: "Mconv1_stage1_L2_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -656,7 +656,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv1_stage1_L2_concat"
   top: "Mconv2_stage1_L2_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -673,7 +673,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv2_stage1_L2_0"
   top: "Mconv2_stage1_L2_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -690,7 +690,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv2_stage1_L2_1"
   top: "Mconv2_stage1_L2_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -718,7 +718,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv2_stage1_L2_concat"
   top: "Mconv3_stage1_L2_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -735,7 +735,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv3_stage1_L2_0"
   top: "Mconv3_stage1_L2_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -752,7 +752,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv3_stage1_L2_1"
   top: "Mconv3_stage1_L2_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -780,7 +780,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv3_stage1_L2_concat"
   top: "Mconv4_stage1_L2_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -797,7 +797,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv4_stage1_L2_0"
   top: "Mconv4_stage1_L2_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -814,7 +814,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv4_stage1_L2_1"
   top: "Mconv4_stage1_L2_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -842,7 +842,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv4_stage1_L2_concat"
   top: "Mconv5_stage1_L2_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -859,7 +859,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv5_stage1_L2_0"
   top: "Mconv5_stage1_L2_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -876,7 +876,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv5_stage1_L2_1"
   top: "Mconv5_stage1_L2_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -904,7 +904,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv5_stage1_L2_concat"
   top: "Mconv6_stage1_L2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 512
     pad: 0
     kernel_size: 1
@@ -921,7 +921,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv6_stage1_L2"
   top: "Mconv7_stage1_L2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 52
     pad: 0
     kernel_size: 1
@@ -942,7 +942,7 @@ layer {
   type: "Convolution"
   bottom: "concat_stage2_L2"
   top: "Mconv1_stage2_L2_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -959,7 +959,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv1_stage2_L2_0"
   top: "Mconv1_stage2_L2_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -976,7 +976,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv1_stage2_L2_1"
   top: "Mconv1_stage2_L2_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1004,7 +1004,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv1_stage2_L2_concat"
   top: "Mconv2_stage2_L2_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1021,7 +1021,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv2_stage2_L2_0"
   top: "Mconv2_stage2_L2_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1038,7 +1038,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv2_stage2_L2_1"
   top: "Mconv2_stage2_L2_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1066,7 +1066,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv2_stage2_L2_concat"
   top: "Mconv3_stage2_L2_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1083,7 +1083,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv3_stage2_L2_0"
   top: "Mconv3_stage2_L2_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1100,7 +1100,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv3_stage2_L2_1"
   top: "Mconv3_stage2_L2_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1128,7 +1128,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv3_stage2_L2_concat"
   top: "Mconv4_stage2_L2_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1145,7 +1145,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv4_stage2_L2_0"
   top: "Mconv4_stage2_L2_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1162,7 +1162,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv4_stage2_L2_1"
   top: "Mconv4_stage2_L2_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1190,7 +1190,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv4_stage2_L2_concat"
   top: "Mconv5_stage2_L2_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1207,7 +1207,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv5_stage2_L2_0"
   top: "Mconv5_stage2_L2_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1224,7 +1224,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv5_stage2_L2_1"
   top: "Mconv5_stage2_L2_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1252,7 +1252,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv5_stage2_L2_concat"
   top: "Mconv6_stage2_L2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 512
     pad: 0
     kernel_size: 1
@@ -1269,7 +1269,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv6_stage2_L2"
   top: "Mconv7_stage2_L2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 52
     pad: 0
     kernel_size: 1
@@ -1290,7 +1290,7 @@ layer {
   type: "Convolution"
   bottom: "concat_stage3_L2"
   top: "Mconv1_stage3_L2_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1307,7 +1307,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv1_stage3_L2_0"
   top: "Mconv1_stage3_L2_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1324,7 +1324,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv1_stage3_L2_1"
   top: "Mconv1_stage3_L2_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1352,7 +1352,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv1_stage3_L2_concat"
   top: "Mconv2_stage3_L2_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1369,7 +1369,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv2_stage3_L2_0"
   top: "Mconv2_stage3_L2_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1386,7 +1386,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv2_stage3_L2_1"
   top: "Mconv2_stage3_L2_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1414,7 +1414,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv2_stage3_L2_concat"
   top: "Mconv3_stage3_L2_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1431,7 +1431,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv3_stage3_L2_0"
   top: "Mconv3_stage3_L2_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1448,7 +1448,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv3_stage3_L2_1"
   top: "Mconv3_stage3_L2_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1476,7 +1476,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv3_stage3_L2_concat"
   top: "Mconv4_stage3_L2_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1493,7 +1493,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv4_stage3_L2_0"
   top: "Mconv4_stage3_L2_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1510,7 +1510,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv4_stage3_L2_1"
   top: "Mconv4_stage3_L2_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1538,7 +1538,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv4_stage3_L2_concat"
   top: "Mconv5_stage3_L2_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1555,7 +1555,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv5_stage3_L2_0"
   top: "Mconv5_stage3_L2_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1572,7 +1572,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv5_stage3_L2_1"
   top: "Mconv5_stage3_L2_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -1600,7 +1600,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv5_stage3_L2_concat"
   top: "Mconv6_stage3_L2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 512
     pad: 0
     kernel_size: 1
@@ -1617,7 +1617,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv6_stage3_L2"
   top: "Mconv7_stage3_L2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 52
     pad: 0
     kernel_size: 1
@@ -1638,7 +1638,7 @@ layer {
   type: "Convolution"
   bottom: "concat_stage0_L1"
   top: "Mconv1_stage0_L1_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -1655,7 +1655,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv1_stage0_L1_0"
   top: "Mconv1_stage0_L1_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -1672,7 +1672,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv1_stage0_L1_1"
   top: "Mconv1_stage0_L1_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -1700,7 +1700,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv1_stage0_L1_concat"
   top: "Mconv2_stage0_L1_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -1717,7 +1717,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv2_stage0_L1_0"
   top: "Mconv2_stage0_L1_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -1734,7 +1734,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv2_stage0_L1_1"
   top: "Mconv2_stage0_L1_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -1762,7 +1762,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv2_stage0_L1_concat"
   top: "Mconv3_stage0_L1_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -1779,7 +1779,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv3_stage0_L1_0"
   top: "Mconv3_stage0_L1_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -1796,7 +1796,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv3_stage0_L1_1"
   top: "Mconv3_stage0_L1_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -1824,7 +1824,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv3_stage0_L1_concat"
   top: "Mconv4_stage0_L1_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -1841,7 +1841,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv4_stage0_L1_0"
   top: "Mconv4_stage0_L1_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -1858,7 +1858,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv4_stage0_L1_1"
   top: "Mconv4_stage0_L1_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -1886,7 +1886,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv4_stage0_L1_concat"
   top: "Mconv5_stage0_L1_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -1903,7 +1903,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv5_stage0_L1_0"
   top: "Mconv5_stage0_L1_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -1920,7 +1920,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv5_stage0_L1_1"
   top: "Mconv5_stage0_L1_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 96
     pad: 1
     kernel_size: 3
@@ -1948,7 +1948,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv5_stage0_L1_concat"
   top: "Mconv6_stage0_L1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 256
     pad: 0
     kernel_size: 1
@@ -1965,7 +1965,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv6_stage0_L1"
   top: "Mconv7_stage0_L1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 26
     pad: 0
     kernel_size: 1
@@ -1987,7 +1987,7 @@ layer {
   type: "Convolution"
   bottom: "concat_stage1_L1"
   top: "Mconv1_stage1_L1_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -2004,7 +2004,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv1_stage1_L1_0"
   top: "Mconv1_stage1_L1_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -2021,7 +2021,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv1_stage1_L1_1"
   top: "Mconv1_stage1_L1_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -2049,7 +2049,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv1_stage1_L1_concat"
   top: "Mconv2_stage1_L1_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -2066,7 +2066,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv2_stage1_L1_0"
   top: "Mconv2_stage1_L1_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -2083,7 +2083,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv2_stage1_L1_1"
   top: "Mconv2_stage1_L1_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -2111,7 +2111,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv2_stage1_L1_concat"
   top: "Mconv3_stage1_L1_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -2128,7 +2128,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv3_stage1_L1_0"
   top: "Mconv3_stage1_L1_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -2145,7 +2145,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv3_stage1_L1_1"
   top: "Mconv3_stage1_L1_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -2173,7 +2173,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv3_stage1_L1_concat"
   top: "Mconv4_stage1_L1_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -2190,7 +2190,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv4_stage1_L1_0"
   top: "Mconv4_stage1_L1_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -2207,7 +2207,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv4_stage1_L1_1"
   top: "Mconv4_stage1_L1_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -2235,7 +2235,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv4_stage1_L1_concat"
   top: "Mconv5_stage1_L1_0"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -2252,7 +2252,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv5_stage1_L1_0"
   top: "Mconv5_stage1_L1_1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -2269,7 +2269,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv5_stage1_L1_1"
   top: "Mconv5_stage1_L1_2"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 128
     pad: 1
     kernel_size: 3
@@ -2297,7 +2297,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv5_stage1_L1_concat"
   top: "Mconv6_stage1_L1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 512
     pad: 0
     kernel_size: 1
@@ -2314,7 +2314,7 @@ layer {
   type: "Convolution"
   bottom: "Mconv6_stage1_L1"
   top: "Mconv7_stage1_L1"
-  convolution_param {
+  convolution_param {engine:CAFFE
     num_output: 26
     pad: 0
     kernel_size: 1

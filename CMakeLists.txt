@@ -282,7 +282,7 @@ option(DOWNLOAD_HAND_MODEL "Download hand model." ON)
 # More options
 option(BUILD_EXAMPLES "Build OpenPose examples." ON)
 option(BUILD_DOCS "Build OpenPose documentation." OFF)
-option(BUILD_PYTHON "Build OpenPose python." OFF)
+option(BUILD_PYTHON "Build OpenPose python." ON)
 if (WIN32)
   option(BUILD_BIN_FOLDER "Copy all required 3rd-party DLL files into {build_directory}/bin. Disable to save some memory." ON)
 endif (WIN32)
@@ -294,7 +294,7 @@ option(BUILD_UNITY_SUPPORT "Build OpenPose as a Unity plugin." OFF)
 option(BUILD_SHARED_LIBS "Build as shared lib." ON)
 
 # Speed profiler
-option(PROFILER_ENABLED "If enabled, OpenPose will be able to print out speed information at runtime." OFF)
+option(PROFILER_ENABLED "If enabled, OpenPose will be able to print out speed information at runtime." ON)
 
 # Threads - Pthread
 if (${GPU_MODE} MATCHES "OPENCL" OR (UNIX OR APPLE))
@@ -752,8 +752,8 @@ if (UNIX OR APPLE)
           -DCPU_ONLY=${CAFFE_CPU_ONLY}
           -DCMAKE_BUILD_TYPE=Release
           -DBUILD_docs=OFF
-          -DBUILD_python=OFF
-          -DBUILD_python_layer=OFF
+	  -DBUILD_python=ON
+	  -DBUILD_python_layer=ON
           -DUSE_LEVELDB=OFF
           -DUSE_LMDB=OFF
           -DUSE_OPENCV=OFF)
@@ -906,6 +906,7 @@ set(examples_3rdparty_libraries ${OpenPose_3rdparty_libraries} ${GFLAGS_LIBRARY}
 
 ### ADD SUBDIRECTORIES
 if (Caffe_FOUND)
+	message(STATUS "Caffe found!")
   add_subdirectory(src)
   if (BUILD_EXAMPLES)
     add_subdirectory(examples)
@@ -935,22 +936,23 @@ message(STATUS "Models Downloaded.")
 
 
 ### PYTHON
-if (BUILD_PYTHON)
-  if (WIN32)
-    execute_process(COMMAND cmd /c cd ${CMAKE_SOURCE_DIR} & git submodule update --init 3rdparty/pybind11/)
+#if (BUILD_PYTHON)
+if (WIN32)
+  execute_process(COMMAND cmd /c cd ${CMAKE_SOURCE_DIR} & git submodule update --init 3rdparty/pybind11/)
+  add_subdirectory(3rdparty/pybind11)
+  add_subdirectory(python)
+elseif (UNIX OR APPLE)
+	if (Caffe_FOUND)
+	  message(STATUS "Python Building")
+    execute_process(COMMAND git submodule update --init ${CMAKE_SOURCE_DIR}/3rdparty/pybind11/)
+    # execute_process(COMMAND git submodule update --init --recursive --remote) # This would initialize them all
     add_subdirectory(3rdparty/pybind11)
     add_subdirectory(python)
-  elseif (UNIX OR APPLE)
-    if (Caffe_FOUND)
-      execute_process(COMMAND git submodule update --init ${CMAKE_SOURCE_DIR}/3rdparty/pybind11/)
-      # execute_process(COMMAND git submodule update --init --recursive --remote) # This would initialize them all
-      add_subdirectory(3rdparty/pybind11)
-      add_subdirectory(python)
     endif (Caffe_FOUND)
-  else (WIN32)
-    message(FATAL_ERROR "Unknown OS.")
-  endif (WIN32)
-endif (BUILD_PYTHON)
+else (WIN32)
+  message(FATAL_ERROR "Unknown OS.")
+endif (WIN32)
+  #endif (BUILD_PYTHON)
 
 
 ### GENERATE DOCUMENTATION
