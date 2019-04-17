@@ -282,7 +282,7 @@ option(DOWNLOAD_HAND_MODEL "Download hand model." ON)
 # More options
 option(BUILD_EXAMPLES "Build OpenPose examples." ON)
 option(BUILD_DOCS "Build OpenPose documentation." OFF)
-option(BUILD_PYTHON "Build OpenPose python." OFF)
+option(BUILD_PYTHON "Build OpenPose python." ON)
 if (WIN32)
   option(BUILD_BIN_FOLDER "Copy all required 3rd-party DLL files into {build_directory}/bin. Disable to save some memory." ON)
 endif (WIN32)
@@ -294,7 +294,7 @@ option(BUILD_UNITY_SUPPORT "Build OpenPose as a Unity plugin." OFF)
 option(BUILD_SHARED_LIBS "Build as shared lib." ON)
 
 # Speed profiler
-option(PROFILER_ENABLED "If enabled, OpenPose will be able to print out speed information at runtime." OFF)
+option(PROFILER_ENABLED "If enabled, OpenPose will be able to print out speed information at runtime." ON)
 
 # Threads - Pthread
 if (${GPU_MODE} MATCHES "OPENCL" OR (UNIX OR APPLE))
